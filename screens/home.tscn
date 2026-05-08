@@ -1,0 +1,507 @@
+[gd_scene format=3 uid="uid://cr8gsggw62dy7"]
+
+[ext_resource type="Script" uid="uid://cq2rqwjf1bnpr" path="res://scripts/home.gd" id="1_home"]
+
+[sub_resource type="StyleBoxFlat" id="SB_enter"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.96, 0.57, 0.72, 1)
+corner_radius_top_left = 23
+corner_radius_top_right = 23
+corner_radius_bottom_right = 23
+corner_radius_bottom_left = 23
+
+[sub_resource type="StyleBoxFlat" id="SB_hover"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0.7, 0.82, 1)
+corner_radius_top_left = 23
+corner_radius_top_right = 23
+corner_radius_bottom_right = 23
+corner_radius_bottom_left = 23
+
+[node name="Home" type="Control" unique_id=177825891]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_home")
+
+[node name="BgColor" type="ColorRect" parent="." unique_id=455962684]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.04, 0.02, 0.1, 1)
+
+[node name="BgTexture" type="TextureRect" parent="." unique_id=1848623993]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BgTint" type="ColorRect" parent="." unique_id=1492043353]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.45)
+
+[node name="TopBar" type="MarginContainer" parent="." unique_id=784458614]
+layout_mode = 0
+anchor_right = 1.0
+offset_bottom = 56.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="TopHBox" type="HBoxContainer" parent="TopBar" unique_id=766199174]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BtnBack" type="Button" parent="TopBar/TopHBox" unique_id=1432809846]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 36)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "< Back"
+flat = true
+
+[node name="TopSpacer" type="Control" parent="TopBar/TopHBox" unique_id=1696398333]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="MainMargin" type="MarginContainer" parent="." unique_id=953961071]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 24
+
+[node name="MainVBox" type="VBoxContainer" parent="MainMargin" unique_id=1419729089]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="LabelTitle" type="Label" parent="MainMargin/MainVBox" unique_id=566930238]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Choose Artist's Concert Room"
+horizontal_alignment = 1
+
+[node name="CarouselStage" type="Control" parent="MainMargin/MainVBox" unique_id=616355604]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="CardRow" type="Control" parent="MainMargin/MainVBox/CarouselStage" unique_id=1915338310]
+unique_name_in_owner = true
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Slot_BrunoMars" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow" unique_id=1209592044]
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Card" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars" unique_id=2102221031]
+custom_minimum_size = Vector2(280, 160)
+layout_mode = 0
+
+[node name="CardHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card" unique_id=1170792196]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="DoorPanel" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card/CardHBox" unique_id=831280956]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="RightArea" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card/CardHBox" unique_id=1880098253]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BokehBg" type="ColorRect" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card/CardHBox/RightArea" unique_id=1965378040]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="CrowdBadge" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card/CardHBox/RightArea" unique_id=36346550]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 32.0
+
+[node name="BadgeHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card/CardHBox/RightArea/CrowdBadge" unique_id=1304336722]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="LabelIcon" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=614721720]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = ":)"
+
+[node name="LabelCrowd" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=1924166315]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "67"
+
+[node name="LabelArtist" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_BrunoMars/Card/CardHBox/RightArea" unique_id=2132331334]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = -72.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="Slot_TaylorSwift" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow" unique_id=656488082]
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Card" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift" unique_id=749190033]
+custom_minimum_size = Vector2(280, 160)
+layout_mode = 0
+
+[node name="CardHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card" unique_id=975637697]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="DoorPanel" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card/CardHBox" unique_id=1790950632]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="RightArea" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card/CardHBox" unique_id=124926380]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BokehBg" type="ColorRect" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card/CardHBox/RightArea" unique_id=1098123726]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="CrowdBadge" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card/CardHBox/RightArea" unique_id=253872225]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 32.0
+
+[node name="BadgeHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card/CardHBox/RightArea/CrowdBadge" unique_id=575936305]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="LabelIcon" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=1260461075]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = ":)"
+
+[node name="LabelCrowd" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=341581688]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "67"
+
+[node name="LabelArtist" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TaylorSwift/Card/CardHBox/RightArea" unique_id=212759333]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = -72.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="Slot_ArianaGrande" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow" unique_id=1696846739]
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Card" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande" unique_id=1662096693]
+custom_minimum_size = Vector2(280, 160)
+layout_mode = 0
+
+[node name="CardHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card" unique_id=1919322888]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="DoorPanel" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card/CardHBox" unique_id=1948296655]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="RightArea" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card/CardHBox" unique_id=86227325]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BokehBg" type="ColorRect" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card/CardHBox/RightArea" unique_id=1674870566]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="CrowdBadge" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card/CardHBox/RightArea" unique_id=144551355]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 32.0
+
+[node name="BadgeHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card/CardHBox/RightArea/CrowdBadge" unique_id=50148090]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="LabelIcon" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=891061770]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = ":)"
+
+[node name="LabelCrowd" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=1624025719]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "67"
+
+[node name="LabelArtist" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ArianaGrande/Card/CardHBox/RightArea" unique_id=1469279830]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = -72.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="Slot_ChappellRoan" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow" unique_id=244498119]
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Card" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan" unique_id=1289104171]
+custom_minimum_size = Vector2(280, 160)
+layout_mode = 0
+
+[node name="CardHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card" unique_id=806306183]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="DoorPanel" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card/CardHBox" unique_id=1862848619]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="RightArea" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card/CardHBox" unique_id=1304494393]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BokehBg" type="ColorRect" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card/CardHBox/RightArea" unique_id=457462198]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="CrowdBadge" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card/CardHBox/RightArea" unique_id=1862300223]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 32.0
+
+[node name="BadgeHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card/CardHBox/RightArea/CrowdBadge" unique_id=1377496283]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="LabelIcon" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=1360352091]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = ":)"
+
+[node name="LabelCrowd" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=1403862168]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "67"
+
+[node name="LabelArtist" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_ChappellRoan/Card/CardHBox/RightArea" unique_id=1289396089]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = -72.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="Slot_TheWeeknd" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow" unique_id=407518641]
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Card" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd" unique_id=172944492]
+custom_minimum_size = Vector2(280, 160)
+layout_mode = 0
+
+[node name="CardHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card" unique_id=115661888]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="DoorPanel" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card/CardHBox" unique_id=406904843]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="RightArea" type="Control" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card/CardHBox" unique_id=1140207962]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BokehBg" type="ColorRect" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card/CardHBox/RightArea" unique_id=1575224762]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="CrowdBadge" type="PanelContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card/CardHBox/RightArea" unique_id=1885888493]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 32.0
+
+[node name="BadgeHBox" type="HBoxContainer" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card/CardHBox/RightArea/CrowdBadge" unique_id=2017142852]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="LabelIcon" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=1117344016]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = ":)"
+
+[node name="LabelCrowd" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card/CardHBox/RightArea/CrowdBadge/BadgeHBox" unique_id=417649509]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "67"
+
+[node name="LabelArtist" type="Label" parent="MainMargin/MainVBox/CarouselStage/CardRow/Slot_TheWeeknd/Card/CardHBox/RightArea" unique_id=585897770]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = -72.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="NavRow" type="HBoxContainer" parent="MainMargin/MainVBox" unique_id=2021462651]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="BtnPrev" type="Button" parent="MainMargin/MainVBox/NavRow" unique_id=1679548023]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+text = "<"
+flat = true
+
+[node name="BtnEnter" type="Button" parent="MainMargin/MainVBox/NavRow" unique_id=1660950850]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("SB_enter")
+theme_override_styles/pressed = SubResource("SB_enter")
+theme_override_styles/hover = SubResource("SB_hover")
+text = "ENTER"
+
+[node name="BtnNext" type="Button" parent="MainMargin/MainVBox/NavRow" unique_id=646155236]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+text = ">"
+flat = true
+
+[node name="CharOverlay" type="Control" parent="." unique_id=179065126]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -120.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="CharDisplay" type="TextureRect" parent="CharOverlay" unique_id=1854480246]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand_mode = 3
+stretch_mode = 6

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bfkmud0nsjxb4"]
+
+[ext_resource type="Script" uid="uid://7k5gongt0s5t" path="res://scripts/welcome_back.gd" id="1_wback"]
+
+[node name="WelcomeBack" type="Control" unique_id=384483309]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wback")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=155466679]
+volume_db = -12.901
+autoplay = true

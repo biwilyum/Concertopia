@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dnq5vkqvhbwcv"]
+
+[ext_resource type="AudioStream" uid="uid://crf3hpn6sd110" path="res://audio/home_music .mp3" id="1_yovb3"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" unique_id=1284073196]
+stream = ExtResource("1_yovb3")
+volume_db = -27.312

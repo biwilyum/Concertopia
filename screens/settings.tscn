@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b2e0qofh80y4e"]
+
+[ext_resource type="Script" uid="uid://bo3y3wtfhxdyk" path="res://scripts/settings.gd" id="1_5em86"]
+
+[node name="settings" type="Control" unique_id=2026910636]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_5em86")

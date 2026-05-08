@@ -1,0 +1,16 @@
+# Godot
+.godot/
+*.translation
+
+# APK release builds
+apk-release/
+
+# Export presets (contains signing keys)
+export_presets.cfg
+
+# Android auto-generated build output
+android/
+
+    # OS
+.DS_Store
+Thumbs.db
